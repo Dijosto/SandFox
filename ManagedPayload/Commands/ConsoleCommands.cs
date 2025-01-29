@@ -6,68 +6,154 @@ namespace SandFox.Commands;
 
 public static class ConsoleCommands
 {
-    private static Type GetTypeFromAssembly(string assemblyName, string typeName)
-    {
-        var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-        foreach (var assembly in assemblies)
-        {
-            if (assembly.GetName().Name == assemblyName)
-            {
-                return assembly.GetType(typeName);
-            }
-        }
-        return null;
-    }
-
-    /// <summary>
-    /// Invokes <c>ConsoleSystem.Collection.AddAssembly</c> using the provided assembly as an argument.
-    /// </summary>
     internal static void AddConsoleCommands(Assembly assembly)
     {
-        var flags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public;
-        var conVarSystem = GetTypeFromAssembly("Sandbox.Engine", "Sandbox.ConVarSystem");
-        if (conVarSystem is null)
+        try
         {
-            Log.Info("ConVarSystem not found");
-            return;
+            // Find the ConVarSystem type
+            Type conVarSystemType = null;
+            foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                conVarSystemType = asm.GetType("Sandbox.ConVarSystem");
+                if (conVarSystemType != null)
+                {
+                    Log.Info($"Found ConVarSystem in {asm.GetName().Name}");
+                    break;
+                }
+            }
+
+            if (conVarSystemType == null)
+            {
+                Log.Error("Could not find ConVarSystem type");
+                return;
+            }
+
+            // Try to call the internal AddAssembly method
+            var flags = BindingFlags.NonPublic | BindingFlags.Static;
+            var addAssemblyMethod = conVarSystemType.GetMethod("AddAssembly", flags);
+
+            if (addAssemblyMethod != null)
+            {
+                Log.Info("Found AddAssembly method, attempting to register commands...");
+                addAssemblyMethod.Invoke(null, new object[] { assembly, "game", null });
+                Log.Info("Successfully registered commands");
+                return;
+            }
+
+            // Fallback: Get the command collection directly
+            var members = conVarSystemType.GetField("Members", flags)?.GetValue(null) as IDictionary;
+            if (members == null)
+            {
+                Log.Error("Could not find Members collection");
+                return;
+            }
+
+            // Find and register all command methods
+            var bindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
+            foreach (var type in assembly.GetTypes())
+            {
+                foreach (var method in type.GetMethods(bindingFlags))
+                {
+                    var cmdAttr = method.GetCustomAttribute<ConCmdAttribute>();
+                    if (cmdAttr == null) continue;
+
+                    try
+                    {
+                        // Get the command name
+                        string cmdName = cmdAttr.Name;
+                        if (string.IsNullOrEmpty(cmdName))
+                            cmdName = method.Name.ToLower();
+
+                        // Check if command already exists
+                        if (members.Contains(cmdName))
+                        {
+                            Log.Warning($"Command {cmdName} already exists - skipping");
+                            continue;
+                        }
+
+                        var managedCmdType = conVarSystemType.Assembly.GetType("Sandbox.ManagedCommand");
+                        if (managedCmdType == null)
+                        {
+                            Log.Error("Could not find ManagedCommand type");
+                            continue;
+                        }
+
+                        var constructor = managedCmdType.GetConstructors(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
+                            .FirstOrDefault();
+
+                        if (constructor == null)
+                        {
+                            Log.Error("Could not find ManagedCommand constructor");
+                            continue;
+                        }
+
+                        // Create cookie container for command
+                        var cookieContainerType = conVarSystemType.Assembly.GetType("Sandbox.CookieContainer");
+                        var cookieContainer = Activator.CreateInstance(cookieContainerType, new object[] { $"convar/{cmdName}" });
+
+                        // Create the command instance
+                        var command = constructor.Invoke(new object[] { assembly, method, cmdAttr, cookieContainer });
+                        if (command != null)
+                        {
+                            members[cmdName] = command;
+                            Log.Info($"Successfully registered command: {cmdName}");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error($"Failed to register command {method.Name}: {ex.Message}");
+                    }
+                }
+            }
+
+            Log.Info("Finished registering commands");
         }
-        var addAssemblyMethod = conVarSystem.GetMethod("AddAssembly", flags, new Type[] { typeof(Assembly), typeof(string), typeof(bool) });
-        if (addAssemblyMethod is null)
+        catch (Exception ex)
         {
-            Log.Info("ConVarSystem.AddAssembly method not found");
-            return;
+            Log.Error($"Error registering console commands: {ex}");
         }
-        addAssemblyMethod.Invoke(null, new object[] { assembly, "game", false });
     }
 
     [ConCmd("dump_console_commands")]
     public static void DumpAllConsoleCommands()
     {
-        var flags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public;
-        var conVarSystem = GetTypeFromAssembly("Sandbox.Engine", "Sandbox.ConVarSystem");
-        if (conVarSystem is null)
+        try
         {
-            Log.Info("ConVarSystem not found");
-            return;
+            Type conVarSystemType = null;
+            foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                conVarSystemType = asm.GetType("Sandbox.ConVarSystem");
+                if (conVarSystemType != null) break;
+            }
+
+            if (conVarSystemType == null)
+            {
+                Log.Error("ConVarSystem not found");
+                return;
+            }
+
+            var flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
+            var members = conVarSystemType.GetField("Members", flags)?.GetValue(null) as IDictionary;
+
+            if (members == null)
+            {
+                Log.Error("Could not find command collection");
+                return;
+            }
+
+            Log.Info($"Found {members.Count} commands:");
+            foreach (var key in members.Keys)
+            {
+                var command = members[key];
+                var cmdType = command.GetType();
+                var name = cmdType.GetProperty("Name", flags)?.GetValue(command);
+                var assembly = cmdType.GetField("assembly", flags)?.GetValue(command) as Assembly;
+                Log.Info($"Command: {name} from {assembly?.GetName()?.Name}");
+            }
         }
-        var members = conVarSystem.GetField("Members", flags)?.GetValue(null);
-        if (members is null)
+        catch (Exception ex)
         {
-            Log.Info("ConVarSystem.Members is null or missing.");
-            return;
+            Log.Error($"Error dumping console commands: {ex}");
         }
-        var dict = members as IDictionary;
-        List<string> lines = new();
-        foreach (var command in dict.Values)
-        {
-            var name = command.GetType().GetProperty("Name", flags)?.GetValue(command);
-            var assembly = command.GetType().GetField("assembly", flags)?.GetValue(command) as Assembly;
-            var isProtected = command.GetType().GetProperty("IsProtected", flags)?.GetValue(command);
-            var help = command.GetType().GetProperty("Help", flags)?.GetValue(command);
-            var line = $"{assembly?.GetName()?.Name} {name} (protected: {isProtected}): {help}";
-            lines.Add( line );
-            Log.Info(line);
-        }
-        File.WriteAllLines("C:\\temp\\SandFoxConsoleCommandDump.txt", lines);
     }
 }
