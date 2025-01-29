@@ -1,5 +1,9 @@
-## Additional Files
-- [Ghoul Grounds Mods](Ghoul%20Grounds%20Mods.md)
+# Ghoul Grounds Mods
+Custom Commands:
+- `heal_player` - Gives the player the specified amount of health. `heal_player 100` to give 100 health.
+- `give_ammo` - Gives the player the specified amount of ammo. `give_ammo 100` to give 100 ammo.
+- `kill_zombies` - Kills all the spawned zombies.
+- `rapid_fire` - Toggles rapid fire mode. `rapid_fire true` to enable, `rapid_fire false` to disable.
 
 # SandFox
 SandFox is a modding and debugging tool for S&box that uses DLL injection to load a .NET assembly in to a running instance of S&box.
