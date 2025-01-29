@@ -160,11 +160,13 @@ namespace SandFox.Commands
             {
                 firearm.FireRate = 0.0001f;
                 firearm.CurrentAmmo = 10000000;
+                firearm.CameraPunch = 0f;
             }
             else
             {
                 firearm.FireRate = 0.3f;
                 firearm.CurrentAmmo = 7;
+                firearm.CameraPunch = 12f;
             }
             Log.Info($"Rapid fire is now {enabled}");
         }
