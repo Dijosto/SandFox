@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Injector\**" />
+    <Compile Remove="ManagedPayload\**" />
+    <Compile Remove="NativePayload\**" />
+    <EmbeddedResource Remove="Injector\**" />
+    <EmbeddedResource Remove="ManagedPayload\**" />
+    <EmbeddedResource Remove="NativePayload\**" />
+    <None Remove="Injector\**" />
+    <None Remove="ManagedPayload\**" />
+    <None Remove="NativePayload\**" />
+  </ItemGroup>
+
+</Project>

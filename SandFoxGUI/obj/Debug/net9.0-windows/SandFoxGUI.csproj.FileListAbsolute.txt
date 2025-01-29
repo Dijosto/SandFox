@@ -1,0 +1,16 @@
+C:\Users\danie\source\repos\SandFoxGUI\bin\Debug\net9.0-windows\SandFoxGUI.exe
+C:\Users\danie\source\repos\SandFoxGUI\bin\Debug\net9.0-windows\SandFoxGUI.deps.json
+C:\Users\danie\source\repos\SandFoxGUI\bin\Debug\net9.0-windows\SandFoxGUI.runtimeconfig.json
+C:\Users\danie\source\repos\SandFoxGUI\bin\Debug\net9.0-windows\SandFoxGUI.dll
+C:\Users\danie\source\repos\SandFoxGUI\bin\Debug\net9.0-windows\SandFoxGUI.pdb
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\SandFoxGUI.Form1.resources
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\SandFoxGUI.csproj.GenerateResource.cache
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\SandFoxGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\SandFoxGUI.AssemblyInfoInputs.cache
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\SandFoxGUI.AssemblyInfo.cs
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\SandFoxGUI.csproj.CoreCompileInputs.cache
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\SandFoxGUI.dll
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\refint\SandFoxGUI.dll
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\SandFoxGUI.pdb
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\SandFoxGUI.genruntimeconfig.cache
+C:\Users\danie\source\repos\SandFoxGUI\obj\Debug\net9.0-windows\ref\SandFoxGUI.dll
