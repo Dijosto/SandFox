@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\SandFoxGUI.csproj",
+      "projectUniqueName": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\SandFoxGUI.csproj",
       "projectName": "SandFoxGUI",
-      "projectPath": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\SandFoxGUI.csproj",
+      "projectPath": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\SandFoxGUI.csproj",
       "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\obj\\",
+      "outputPath": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

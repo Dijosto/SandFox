@@ -23,6 +23,20 @@ namespace SandFoxGUI
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnUnload_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var injector = new NativePayloadInjector("sbox");
+                
+                MessageBox.Show("NOT IMPLEMENTED: Unload successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

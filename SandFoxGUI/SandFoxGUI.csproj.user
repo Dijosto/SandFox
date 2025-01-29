@@ -4,11 +4,5 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ManagedPayload\Components\ForceCameraFov.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="ManagedPayload\Components\FreeCamController.cs">
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

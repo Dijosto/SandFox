@@ -1,33 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\",
+  "WorkspaceRootPath": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\source\\repos\\sandfoxgui\\managedpayload\\commands\\cameracommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|solutionrelative:managedpayload\\commands\\cameracommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\source\\repos\\sandfoxgui\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\desktop\\sandfox-main\\sandfox\\sandfoxgui\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\source\\repos\\sandfoxgui\\nativepayloadinjector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|solutionrelative:nativepayloadinjector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\source\\repos\\sandfoxgui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|C:\\Users\\danie\\source\\repos\\SandFoxGUI\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\source\\repos\\sandfoxgui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\desktop\\sandfox-main\\sandfox\\sandfoxgui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\source\\repos\\sandfoxgui\\sandfoxgui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\desktop\\sandfox-main\\sandfox\\sandfoxgui\\nativepayloadinjector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|solutionrelative:nativepayloadinjector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\desktop\\sandfox-main\\sandfox\\sandfoxgui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\source\\repos\\SandFoxGUI\\ManagedPayload\\Commands\\CameraCommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|c:\\users\\danie\\desktop\\sandfox-main\\sandfox\\sandfoxgui\\sandfoxgui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{1FA5F2A3-371E-4D6F-BF44-432EC234D0B4}|SandFoxGUI.csproj|solutionrelative:sandfoxgui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -38,34 +33,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CameraCommands.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\ManagedPayload\\Commands\\CameraCommands.cs",
-              "RelativeDocumentMoniker": "ManagedPayload\\Commands\\CameraCommands.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\ManagedPayload\\Commands\\CameraCommands.cs",
-              "RelativeToolTip": "ManagedPayload\\Commands\\CameraCommands.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T15:06:11.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NativePayloadInjector.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\NativePayloadInjector.cs",
-              "RelativeDocumentMoniker": "NativePayloadInjector.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\NativePayloadInjector.cs",
-              "RelativeToolTip": "NativePayloadInjector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T15:05:49.873Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -76,24 +45,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
+              "Title": "CameraCommands.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\ManagedPayload\\Commands\\CameraCommands.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\SandFoxGUI\\ManagedPayload\\Commands\\CameraCommands.cs",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\ManagedPayload\\Commands\\CameraCommands.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\SandFoxGUI\\ManagedPayload\\Commands\\CameraCommands.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T15:06:11.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NativePayloadInjector.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\NativePayloadInjector.cs",
+              "RelativeDocumentMoniker": "NativePayloadInjector.cs",
+              "ToolTip": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\NativePayloadInjector.cs",
+              "RelativeToolTip": "NativePayloadInjector.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T15:05:49.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\Form1.cs",
+              "ToolTip": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwvx8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T14:26:39.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "SandFoxGUI.csproj",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\SandFoxGUI.csproj",
+              "DocumentMoniker": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\SandFoxGUI.csproj",
               "RelativeDocumentMoniker": "SandFoxGUI.csproj",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\SandFoxGUI.csproj",
+              "ToolTip": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\SandFoxGUI.csproj",
               "RelativeToolTip": "SandFoxGUI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -101,13 +95,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowC8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T14:14:42.376Z",
               "EditorCaption": ""
@@ -116,25 +110,13 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\Program.cs",
+              "ToolTip": "C:\\Users\\danie\\Desktop\\SandFox-main\\SandFox\\SandFoxGUI\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T14:13:42.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\SandFoxGUI\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T14:12:01.033Z"
+              "WhenOpened": "2025-01-29T14:13:42.931Z"
             }
           ]
         }

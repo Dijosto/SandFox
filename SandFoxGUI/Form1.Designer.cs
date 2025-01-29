@@ -15,31 +15,44 @@
 
         private void InitializeComponent()
         {
-            this.btnInject = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            btnInject = new Button();
+            btnUnload = new Button();
+            SuspendLayout();
             // 
             // btnInject
             // 
-            this.btnInject.Location = new System.Drawing.Point(100, 100);
-            this.btnInject.Name = "btnInject";
-            this.btnInject.Size = new System.Drawing.Size(100, 23);
-            this.btnInject.TabIndex = 0;
-            this.btnInject.Text = "Inject";
-            this.btnInject.UseVisualStyleBackColor = true;
-            this.btnInject.Click += new System.EventHandler(this.btnInject_Click);
+            btnInject.Location = new Point(43, 12);
+            btnInject.Name = "btnInject";
+            btnInject.Size = new Size(223, 43);
+            btnInject.TabIndex = 0;
+            btnInject.Text = "Inject";
+            btnInject.UseVisualStyleBackColor = true;
+            btnInject.Click += btnInject_Click;
+            // 
+            // btnUnload
+            // 
+            btnUnload.Location = new Point(43, 61);
+            btnUnload.Name = "btnUnload";
+            btnUnload.Size = new Size(223, 43);
+            btnUnload.TabIndex = 1;
+            btnUnload.Text = "Unload";
+            btnUnload.UseVisualStyleBackColor = true;
+            btnUnload.Click += btnUnload_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.btnInject);
-            this.Name = "Form1";
-            this.Text = "Native Payload Injector";
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(306, 140);
+            Controls.Add(btnInject);
+            Controls.Add(btnUnload);
+            Name = "Form1";
+            Text = "SandFoxGUI";
+            ResumeLayout(false);
         }
 
         private System.Windows.Forms.Button btnInject;
+        private System.Windows.Forms.Button btnUnload;
     }
 }
 
