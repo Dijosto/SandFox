@@ -18,6 +18,12 @@ SandFox is a modding and debugging tool for S&box that uses DLL injection to loa
 3. In S&box, press F1 to open the S&box console
 4. If "Successful SandFoxSystem init." was logged, then all the ConCmds and ConVars in ManagedPayload should be available to use.
 5. After closing S&box, SandFox commands will not be useable again until after restarting S&box and running ManagedClient.exe again.
+# Alternative
+1. Run SandFoxGUI.exe
+2. Run S&box and run a game
+3. Press the Inject button
+4. If "Successful SandFoxSystem init." was logged, then all the ConCmds and ConVars in ManagedPayload should be available to use.
+5. After closing S&box, SandFox commands will not be useable again until after restarting S&box and pressing Inject again.
 
 ## Modifying
 To add new behavior to SandFox, add a ConCmd or ConVar to the ManagedPayload C# project, build it, and copy the output DLL to same directory 
