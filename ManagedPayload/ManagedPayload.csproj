@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <RootNamespace>SandFox</RootNamespace>
@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="package.brick.ghoul_grounds">
+      <HintPath>..\..\..\sbox dump\Dumps\package.brick.ghoul_grounds.dll</HintPath>
+    </Reference>
     <Reference Include="Sandbox.Engine">
       <HintPath>E:\SteamLibrary\steamapps\common\sbox\bin\managed\Sandbox.Engine.dll</HintPath>
       <Private>False</Private>

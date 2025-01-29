@@ -22,7 +22,7 @@ public static class MapCommands
         map.MapName = mapName;
         map.OnMapLoaded += () =>
         {
-            PlayerCommands.SetPlayerPosition( new Vector3( 0, 0, 300f ) );
+            PlayerCommands.SetPlayerPosition("0","0","300");
             Game.ActiveScene.NavMesh.SetDirty();
         };
         map.Enabled = true;

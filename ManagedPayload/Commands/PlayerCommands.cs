@@ -109,8 +109,16 @@ namespace SandFox.Commands
         {
             if (Game.ActiveScene is null)
                 return;
+            var zombieSpawned = ZombieSpawner.ZombiesSpawnedThisWave;
 
-            var zombies = Game.ActiveScene.Directory.FindByName("zombie", false).ToList();
+            var zombies = new List<GameObject>();
+            for (int i = 0; i < zombieSpawned; i++)
+            {
+                var zombieName = i == 0 ? "zombie" : $"zombie ({i})";
+                var foundZombies = Game.ActiveScene.Directory.FindByName(zombieName, false);
+                zombies.AddRange(foundZombies);
+            }
+
             for (int i = zombies.Count - 1; i >= 0; i--)
             {
                 var zombie = zombies[i];
