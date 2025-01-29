@@ -15,12 +15,19 @@ namespace SandFox.Commands
 
             float ParsePosition(string input, float currentValue)
             {
-                if (input.StartsWith("this."))
+                if (input.StartsWith("this") || input.StartsWith("this.") || input.StartsWith("p"))
                 {
                     var offset = input.Substring(5);
-                    if (float.TryParse(offset, out var offsetValue))
+                    if (string.IsNullOrEmpty(offset))
                     {
-                        return currentValue + offsetValue;
+                        return currentValue;
+                    }
+                    else
+                    {
+                        if (float.TryParse(offset, out var offsetValue))
+                        {
+                            return currentValue + offsetValue;
+                        }
                     }
                 }
                 else if (float.TryParse(input, out var value))
@@ -59,6 +66,9 @@ namespace SandFox.Commands
             }
         }
 
+
+
+
         [ConCmd("heal_player")]
         public static void HealPlayer(string amount)
         {
@@ -79,7 +89,7 @@ namespace SandFox.Commands
             }
 
             player.Health += healAmount;
-            Log.Info($"Healed player for {healAmount}");
+            Log.Info($"Healed for {healAmount}");
         }
         [ConCmd("give_ammo")]
         public static void GiveAmmo(string amount)
@@ -102,7 +112,7 @@ namespace SandFox.Commands
 
             Firearm firearm = (Firearm)PlayerPawn.LocalPlayer.Interaction.HeldItem;
             firearm.CurrentAmmo += ammoAmount;
-            Log.Info($"Gave Ammo to player for {ammoAmount}");
+            Log.Info($"Gave {ammoAmount} Ammo");
         }
         [ConCmd("kill_zombies")]
         public static void KillZombie()
@@ -118,7 +128,7 @@ namespace SandFox.Commands
                 var foundZombies = Game.ActiveScene.Directory.FindByName(zombieName, false);
                 zombies.AddRange(foundZombies);
             }
-
+            Log.Info($"Killed {zombies.Count} zombies");
             for (int i = zombies.Count - 1; i >= 0; i--)
             {
                 var zombie = zombies[i];
@@ -126,7 +136,7 @@ namespace SandFox.Commands
                 zombies.RemoveAt(i);
             }
 
-            Log.Info($"Killed {zombies.Count} zombies");
+           
         }
 
         [ConCmd("rapid_fire")]
@@ -134,7 +144,7 @@ namespace SandFox.Commands
         {
             if (!bool.TryParse(enabled, out var bEnabled))
             {
-                Log.Info("Invalid heal amount. Use: give_ammo amount");
+                Log.Info("Invalid: rapid_fire true");
                 return;
             }
             if (Game.ActiveScene is null)
