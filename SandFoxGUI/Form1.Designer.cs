@@ -27,7 +27,7 @@
             btnInject.TabIndex = 0;
             btnInject.Text = "Inject";
             btnInject.UseVisualStyleBackColor = true;
-            btnInject.Click += btnInject_Click;
+            btnInject.Click += OnInjectButtonClick;
             // 
             // btnUnload
             // 
@@ -37,7 +37,7 @@
             btnUnload.TabIndex = 1;
             btnUnload.Text = "Unload";
             btnUnload.UseVisualStyleBackColor = true;
-            btnUnload.Click += btnUnload_Click;
+            btnUnload.Click += OnUnloadButtonClick;
             // 
             // Form1
             // 
