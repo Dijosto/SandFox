@@ -17,7 +17,8 @@ namespace SandFox.Commands
             {
                 if (input.StartsWith("this") || input.StartsWith("this.") || input.StartsWith("p"))
                 {
-                    var offset = input.Substring(5);
+                    var count = input.Count();
+                    var offset = input.Substring(count);
                     if (string.IsNullOrEmpty(offset))
                     {
                         return currentValue;
