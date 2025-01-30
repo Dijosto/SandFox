@@ -5,10 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <RootNamespace>SandFox</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lib.Harmony" Version="2.3.1.1" />
+    <PackageReference Include="Lib.Harmony" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,10 @@
       <HintPath>E:\SteamLibrary\steamapps\common\sbox\bin\managed\Sandbox.System.dll</HintPath>
       <Private>False</Private>
     </Reference>
+	  <Reference Include="Sandbox.NetCore">
+		  <HintPath>E:\SteamLibrary\steamapps\common\sbox\bin\managed\Sandbox.NetCore.dll</HintPath>
+		  <Private>False</Private>
+	  </Reference>
   </ItemGroup>
 
 </Project>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SandFoxGUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+827440e36b70de2c7968ecd2c0d4e94c5e50020f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a265c799e23c1f423a1a0b490a87b24b51abc514")]
 [assembly: System.Reflection.AssemblyProductAttribute("SandFoxGUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SandFoxGUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
