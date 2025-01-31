@@ -4,6 +4,7 @@ Custom Commands:
 - `give_ammo` - Gives the player the specified amount of ammo. `give_ammo 100` to give 100 ammo.
 - `kill_zombies` - Kills all the spawned zombies.
 - `rapid_fire` - Toggles rapid fire mode. `rapid_fire true` to enable, `rapid_fire false` to disable.
+- `start_lobby` - Starts a lobby. Still need to figure out method patching to make co-op work
 
 # SandFox
 SandFox is a modding and debugging tool for S&box that uses DLL injection to load a .NET assembly in to a running instance of S&box.
@@ -13,12 +14,6 @@ SandFox is a modding and debugging tool for S&box that uses DLL injection to loa
 - Adds console commands to support modifying game behavior such as `map_change` and `freecam_start`
 
 ## How to Use
-1. Ensure that S&box is already running a game
-2. Run ManagedClient.exe
-3. In S&box, press F1 to open the S&box console
-4. If "Successful SandFoxSystem init." was logged, then all the ConCmds and ConVars in ManagedPayload should be available to use.
-5. After closing S&box, SandFox commands will not be useable again until after restarting S&box and running ManagedClient.exe again.
-## Alternative
 1. Run SandFoxGUI.exe
 2. Run S&box and run a game
 3. Press the Inject button
