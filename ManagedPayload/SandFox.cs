@@ -1,20 +1,19 @@
-﻿using HarmonyLib;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace SandFox;
 
 public static class SandFoxSystem
 {
     public static Assembly CurrentGameAssembly { get; private set; }
-    public static Harmony HarmonyInstance { get; private set; }
-    public static void Init( Assembly gameAssembly )
+
+    public static void Init(Assembly gameAssembly)
     {
         CurrentGameAssembly = gameAssembly;
 
         try
         {
             AddConsoleCommands();
-            InstantiateHarmony();
+            InitializePatches();
         }
         catch (Exception e)
         {
@@ -27,17 +26,22 @@ public static class SandFoxSystem
     {
         Log.Info($"Adding console commands from {nameof(ManagedPayload)}");
         Commands.ConsoleCommands.AddConsoleCommands(Assembly.GetExecutingAssembly());
-        Log.Info($"Successful {nameof(SandFoxSystem)} init.");
     }
 
-    private static void InstantiateHarmony()
+    private static void InitializePatches()
     {
-        if ( CurrentGameAssembly is null )
-            throw new InvalidOperationException("A game assembly must be loaded before instantiating Harmony.");
+        if (CurrentGameAssembly is null)
+            throw new InvalidOperationException("A game assembly must be loaded before initializing patches");
 
-        var gameAssemblyName = CurrentGameAssembly.GetName().Name.Replace("package.", "");
-        HarmonyInstance = new Harmony($"com.{gameAssemblyName}");
-        HarmonyInstance.PatchCategory(Assembly.GetExecutingAssembly(), gameAssemblyName);
-        Log.Info($"Harmony instantiated: {HarmonyInstance.Id}");
+        // Initialize MonoMod patches
+        Patches.ZombieSpawnerPatch.Initialize();
+
+        Log.Info("MonoMod patches initialized");
+    }
+
+    public static void Cleanup()
+    {
+        // Cleanup patches when system is shutting down
+        Patches.ZombieSpawnerPatch.Cleanup();
     }
 }

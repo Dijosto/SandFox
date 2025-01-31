@@ -39,7 +39,7 @@ namespace SandFox.Components
         public static void StartLobby()
         {
             Log.Info("Starting lobby");
-            var GameManager = MightyBrick.GhoulGrounds.GameManager.Instance;
+            var GameManager = Game.ActiveScene.GetAllComponents<MightyBrick.GhoulGrounds.GameManager>().FirstOrDefault();
             if (!GameManager.IsValid())
             {
                 Log.Info("GameManager not found");
@@ -74,6 +74,8 @@ namespace SandFox.Components
                 Log.Info("ZombieSpawner not found");
                 return;
             }
+            spawner.GameObject.NetworkMode = NetworkMode.Object;
+            spawner.GameObject.NetworkSpawn();
             spawner.ZombiePrefab.NetworkMode = NetworkMode.Object;
             Log.Info(Networking.IsActive ? "Lobby started" : "Failed to start lobby");
         }
